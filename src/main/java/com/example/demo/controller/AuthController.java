@@ -14,8 +14,8 @@ public class AuthController {
         return "auth/login";
     }
 
-    @GetMapping("/admin/dashboard")
-    public String dashboard(){
-        return "admin/index";
-    }
+//    @GetMapping("/admin/dashboard")
+//    public String dashboard(){
+//        return "admin/index";
+//    }
 }
