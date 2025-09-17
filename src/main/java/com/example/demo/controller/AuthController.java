@@ -14,8 +14,8 @@ public class AuthController {
         return "auth/login";
     }
 
-    @PostMapping("/admin/dashboard")
+    @GetMapping("/admin/dashboard")
     public String dashboard(){
-        return "redirect:/admin/dashboard";
+        return "admin/index";
     }
 }
