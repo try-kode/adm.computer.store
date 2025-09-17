@@ -23,13 +23,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light" th:replace="~{/admin/layout/navbar :: navbar}">
-  </nav>
+<div th:replace="~{/admin/layout/navbar :: navbar}"></div>
   <!-- /.navbar -->
-
+<div th:replace="~{/admin/layout/sidebar :: sidebar}"></div>
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4" th:replace="~{/admin/layout/sidebar :: sidebar}">
-  </aside>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" th:fragment="content">
