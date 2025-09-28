@@ -15,4 +15,19 @@ public class HomeController {
     public String contact(){
         return "contact";
     }
+
+    @GetMapping("/service")
+    public String service(){
+        return "service";
+    }
+
+    @GetMapping("/product")
+    public String product(){
+        return "product";
+    }
+
+    @GetMapping("/about")
+    public String about(){
+        return "about";
+    }
 }
