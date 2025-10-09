@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
     <title>Viheakode</title>
     <style>
         /* Reset */
@@ -144,18 +145,20 @@
 </header>
 
 <!-- Content -->
-<main>
-    <h1>Welcome to Viheakode</h1>
-    <div class="center-image">
-        <img th:src="@{/admin/image/viheakode-logo.png}" alt="viheakode-logo" />
+<div class="container">
+    <div class="product-grid">
+        <!-- Product Card 1 -->
+
+
     </div>
-</main>
+</div>
 
 <!-- Footer -->
 <footer>
     Copyright &copy; 2025 Viheakode. All rights reserved.
 </footer>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/admin/js/product.js"></script>
 <script>
     function toggleMenu() {
       document.getElementById('navbar').classList.toggle('active');

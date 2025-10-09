@@ -150,13 +150,17 @@
     <div class="center-image">
         <img th:src="@{/admin/image/under-maintenance.png}" alt="QR Code" />
     </div>
+    <div class="card">
+
+    </div>
 </main>
 
 <!-- Footer -->
 <footer>
     Copyright &copy; 2025 Viheakode. All rights reserved.
 </footer>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script th:src="@{/admin/js/product.js}"></script>
 <script>
     function toggleMenu() {
       document.getElementById('navbar').classList.toggle('active');
