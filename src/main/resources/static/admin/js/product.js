@@ -12,18 +12,22 @@ function fetchData() {
                     const items = resp.data
                     items.forEach(item => {
                         products +=`
-                            <div class="product-card">
 
-                                <img src="${item.image}" alt="Product image" />
-                                <h3>${item.productName}</h3>
-                                <p>${item.description}</p>
-                                <div class="price">USD ${item.price}</div>
-                                <div class="stars">★★★★☆</div>
-                                <button class="buy-btn" style="background-color: #00bcd4;">Buy Now</button>
+                            <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+                                <div class="card text-center p-3 h-100" style="max-width: 320px; width: 100%;">
+                                    <img src="${item.image}" class="card-img-top mx-auto" alt="Product">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title fw-bold">${item.productName}</h5>
+                                        <p class="card-text text-muted">${item.description}</p>
+                                        <h6 class="fw-bold">USD ${item.price}</h6>
+                                        <div class="rating mb-3 text-warning">★ ★ ★ ★ ☆</div>
+                                        <a href="#" class="btn btn-buy mt-auto">Buy Now</a>
+                                    </div>
+                                </div>
                             </div>
                         `
                     })
-                    $(".product-grid").html(products)
+                    $("#product-card").html(products)
                 }
 
             }

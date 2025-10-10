@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Viheakode</title>
+    <style>
+        /* Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+          height: 100%;
+          font-family: Arial, sans-serif;
+          background-color: #f4f6f9;
+          color: #333;
+          display: flex;
+          flex-direction: column;
+        }
+
+        /* Navbar */
+        header {
+          background-color: #0d1b4c;
+          color: #fff;
+          padding: 15px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .logo {
+          font-size: 20px;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+
+        nav {
+          display: flex;
+          gap: 20px;
+        }
+
+        nav a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 16px;
+          transition: color 0.3s;
+        }
+
+        nav a:hover {
+          color: #ffd700;
+        }
+
+        /* Hamburger */
+        .hamburger {
+          display: none;
+          flex-direction: column;
+          cursor: pointer;
+        }
+
+        .hamburger span {
+          height: 3px;
+          width: 25px;
+          background: #fff;
+          margin: 4px 0;
+          border-radius: 5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          nav {
+            display: none;
+            flex-direction: column;
+            background: #0d1b4c;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 200px;
+            padding: 15px;
+          }
+          nav.active { display: flex; }
+          .hamburger { display: flex; }
+        }
+
+        /* Content */
+        main {
+          flex: 1; /* push footer down */
+          padding: 40px 20px;
+          text-align: center;
+        }
+
+        main h1 {
+          font-size: 2.5rem;
+          color: #0d1b4c;
+          margin-bottom: 20px;
+        }
+
+        main p {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          max-width: 700px;
+          margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+          background-color: #0d1b4c;
+          color: #fff;
+          text-align: center;
+          padding: 15px;
+        }
+
+    .center-image {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .center-image img {
+      max-width: 300px;  /* keeps it responsive */
+      height: auto;
+      border-radius: 10px; /* optional, rounded edges */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* optional shadow */
+    }
+
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">Viheakode</div>
+    <nav id="navbar">
+        <a href="/">Home</a>
+        <a th:href="@{/product}">Product</a>
+        <a th:href="@{/service}">Service</a>
+        <a th:href="@{/about}">About</a>
+        <a th:href="@{/contact}">Contact</a>
+        <a href="https://adm.viheakode.online/login" target="_blank">Login</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+
+<!-- Content -->
+<div class="container">
+    <div class="product-grid">
+        <!-- Product Card 1 -->
+
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    Copyright &copy; 2025 Viheakode. All rights reserved.
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/admin/js/product.js"></script>
+<script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('active');
+    }
+</script>
+</body>
+</html>
