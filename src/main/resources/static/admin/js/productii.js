@@ -21,7 +21,8 @@ function fetchData() {
                                         <p class="card-text text-muted">${item.description}</p>
                                         <h6 class="fw-bold">USD ${item.price}</h6>
                                         <div class="rating mb-3 text-warning">★ ★ ★ ★ ☆</div>
-                                        <a href="#" class="btn btn-buy mt-auto">Buy Now</a>
+                                        <a href="#" class="btn btn-add mt-auto">ADD TO CART</a>
+                                        <a href="#" class="btn btn-buy mt-auto">BUY NOW</a>
                                     </div>
                                 </div>
                             </div>
